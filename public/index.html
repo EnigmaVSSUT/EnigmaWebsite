@@ -40,6 +40,7 @@
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
+
     </head>
 
     <body id="body">
@@ -565,7 +566,21 @@
 			</div>
 
 			<!-- Google map -->
-			<div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+			<div id="map" style="width:1348px;height:380px" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+			<script>
+			function myMap() {
+  var myCenter = new google.maps.LatLng(21.4963968,83.90346869999996);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8R0qswZUlg1zKSgyDHoeVMdf_XE66Ic&callback=myMap"></script>
+
 			<!-- End Google map -->
 
 		</section>
