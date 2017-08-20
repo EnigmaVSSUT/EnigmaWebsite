@@ -115,7 +115,7 @@
 					<div class="item active" style="background-image: url(img/banner3.jpg);">
 						<div class="carousel-caption">
 							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span> Enigma</span>!</h2>
-							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">The Coding</span> Club</h3>
+							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color"><b>The Coding</b></span><span style="font-weight: bold;"> Club</span></h3>
 							<p data-wow-duration="1000ms" class="wow slideInRight animated">VSSUT</p>
 
 							<ul class="social-links text-center">
@@ -132,7 +132,7 @@
 					<div class="item" style="background-image: url(img/banner2.jpg);">
 						<div class="carousel-caption">
 							<h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span>Enigma</span>!</h2>
-							<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">The Coding</span> Club</h3>
+							<h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color"><b>The Coding</b></span><span style="font-weight: bold;"> Club</span></h3>
 							<p data-wow-duration="500ms" class="wow slideInRight animated">VSSUT</p>
 
 							<ul class="social-links text-center">
@@ -566,8 +566,24 @@
 			</div>
 
 			<!-- Google map -->
-			<div id="map" style="width:1348px;height:380px" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
-			<script>
+			<div id="map" style="width:1350px;height:380px" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+			<script src = "https://maps.googleapis.com/maps/api/js"></script>
+      
+      <script>
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(20.593684, 78.96288), zoom:15,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+				
+            var map = new google.maps.Map(document.getElementById("map"),mapOptions);
+         }
+      </script>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfJZ6ord_c6joHPA9GOo_baQtTn4XoOzM&callback=initMap">
+    </script>
+			<!--<script>
 			function myMap() {
   var myCenter = new google.maps.LatLng(21.4963968,83.90346869999996);
   var mapCanvas = document.getElementById("map");
@@ -576,9 +592,9 @@
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
 }
-</script>
+</script> -->
 
-	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8R0qswZUlg1zKSgyDHoeVMdf_XE66Ic&callback=myMap"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM8R0qswZUlg1zKSgyDHoeVMdf_XE66Ic&callback=myMap"></script> -->
 
 
 			<!-- End Google map -->
