@@ -41,8 +41,6 @@
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-				<script src="js/javascript.js"></script>
-
     </head>
 
     <body id="body">
@@ -100,7 +98,7 @@
 
 					<form class="modal-content animate" action="/action_page.php">
 						<div class="imgcontainer">
-							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><script src="js/javascript.js"></script>&times;</span>
 							<img src="img/img_avatar2.png" alt="Avatar" class="avatar">
 						</div>
 
@@ -111,12 +109,12 @@
 							<button type="submit">Login</button>
 							<input type="checkbox" checked="checked"> Remember me
 						</center></div>
+						<div class="container">
 							<span class="psw">
 								<button href="" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
-								<a href="#">Forgot Password?</a></span></form>
+								<a href="#">Forgot Password?</a></span></form></div>
 				</div>
 				<div id="id02" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
   <form class="modal-content animate" action="/action_page.php">
     <div class="container1">
 			<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span><br>
@@ -124,7 +122,6 @@
       <input type="text" placeholder="Enter Email" name="email" required><br>
       <input type="password" placeholder="Enter Password" name="psw" required><br>
       <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
-      <input type="checkbox" checked="checked"> Remember me
       <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
