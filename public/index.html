@@ -46,8 +46,7 @@ li:hover {
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-		<!-- Login -->
-		<script src="js/login1_js.js"></script>
+
 
 
     </head>
@@ -96,16 +95,22 @@ li:hover {
                     </ul>
                 </nav>
 				<!-- /main nav -->
-
             </div>
         </header>
 				<!-- Login form -->
-
+				
 				<div id="id01" class="modal">
-
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><font color='red'>&times;</font></span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+				<font color='red'>
+
+					<!-- Call Login JS -->
+				<script src="js/login1_js.js"></script>
+
+				   	&times;
+					</font>
+				</span>
       <img height="90" width="15" src="img/logo-footer.png"  alt="logo1" class="logo1">
     </div>
 
