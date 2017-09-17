@@ -44,6 +44,7 @@ img.logo1 {
 
 .container {
     width: auto;
+    color: #A9A9A9;
 }
 
 span.psw {
@@ -68,12 +69,11 @@ span.psw {
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #E7DDB9;
+  background-color: #0000;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 40%; /* Could be more or less, depending on screen size */
 }
-
 /* The Close Button (x) */
 .close {
     position: absolute;
