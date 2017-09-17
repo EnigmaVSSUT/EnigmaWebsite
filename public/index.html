@@ -111,10 +111,28 @@
 							<button type="submit">Login</button>
 							<input type="checkbox" checked="checked"> Remember me
 						</center></div>
-							<span class="psw"><a href="#">Forgot Password?</a></span>
-
-					</form>
+							<span class="psw">
+								<button href="" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+								<a href="#">Forgot Password?</a></span></form>
 				</div>
+				<div id="id02" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+			<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span><br>
+			<input type="text" placeholder="Enter Name" name="name" required><br>
+      <input type="text" placeholder="Enter Email" name="email" required><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+      <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
         <!--
         Home Slider
         ==================================== -->
