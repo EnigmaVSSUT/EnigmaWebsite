@@ -45,7 +45,11 @@ img.avatar {
 .container {
     padding: 16px;
 }
-
+.container1 {
+    padding: 16px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
 span.psw {
     float: right;
     padding-top: 16px;
