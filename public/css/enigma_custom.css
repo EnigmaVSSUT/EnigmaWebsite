@@ -27,7 +27,6 @@ button:hover {
 .signup {
     width: auto;
     padding: 10px 18px;
-    background-color: #2699F9;
 }
 
 /* Center the image and position the close button */
@@ -37,10 +36,6 @@ button:hover {
     position: center;
 }
 
-img.logo1 {
-    width: 25%;
-    border-radius: 50%;
-}
 
 .container {
     width: auto;
@@ -94,6 +89,13 @@ span.psw {
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
+}
+
+.logo-login{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
 }
 
 @-webkit-keyframes animatezoom {
