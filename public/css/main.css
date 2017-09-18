@@ -187,8 +187,17 @@ body > section,
   background-size: cover;
 }
 
-.carousel-caption {
-  top: 50%;
+.carousel-caption{
+  top: 10%;
+}
+.carousel-caption .wrapper{
+margin-top: 25%;
+}
+.carousel-caption .wrapper .social-links{
+  margin-top: 5%; 
+}
+.carousel-caption .wrapper p{
+margin-top: 0%;
 }
 
 .carousel-caption h2 {
@@ -203,13 +212,15 @@ body > section,
 .carousel-caption h3 {
   font-size: 48px;
   font-weight: 300;
-  margin: 6px 0 20px;
+  margin: 15px 0 20px;
 }
 
 .carousel-caption p {
   color: #fff;
   font-size: 18px;
   font-weight: 300;
+  margin-top: 32%;
+
 }
 
 .carousel-caption p:before,
@@ -240,6 +251,7 @@ top: -8px;
   color: rgba(255, 255, 255, 0.3);
   display: block;
   margin: 0 6px;
+ 
 }
 
 .social-links li a:hover {
@@ -265,7 +277,21 @@ top: -8px;
   height: 8px;
   width: 8px;
 }
-
+.carousel-caption p a
+  {
+     background-color: #0feb9e;
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+  }
+  .carousel-caption p a:hover
+  {
+     background-color: #34cc43;
+  }
 
 
 /*=========================================
