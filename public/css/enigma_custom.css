@@ -1,8 +1,8 @@
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 40%;
+    width: 30%;
     padding: 12px 20px;
-    margin: 8px 20px;
+    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -10,38 +10,36 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #1ea78d;
-    color: white;
+    background-color: rgb(40,180,147);
+    color: #ffffff;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 20px;
     border: none;
     cursor: pointer;
-    width: 25%;
+    width: 12%;
 }
 
 button:hover {
-    opacity: 0.7;
-}
-
-/* Extra styles for the cancel button */
-.signup {
-    width: auto;
-    padding: 10px 18px;
+    opacity: 0.8;
 }
 
 /* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
-    width: auto;
+    width:auto;
     position: center;
 }
 
-
-.container {
-    width: auto;
-    color: #A9A9A9;
+img.avatar {
+    width: 15%;
+    border-radius: 50%;
 }
-
+.container1 {
+    padding: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width:auto;
+  }
 span.psw {
     float: right;
     padding-top: 16px;
@@ -59,16 +57,18 @@ span.psw {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    padding: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #0000;
+    background-color: #dddddd;
+    opacity: .95;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
+    border: 1px solid #888; /* Could be more or less, depending on screen size */
+    width: 60%;
 }
+
 /* The Close Button (x) */
 .close {
     position: absolute;
@@ -89,13 +89,6 @@ span.psw {
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
-}
-
-.logo-login{
-    height: 100px;
-    width: 100px;
-    margin-top: 10px;
-    border-radius: 50%;
 }
 
 @-webkit-keyframes animatezoom {

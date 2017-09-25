@@ -4,10 +4,10 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <style>
-li:hover {
-	opacity: 0.7;
-}
-	</style>
+ li:hover {
+ 	opacity: 0.7;
+ }
+ 	</style>
 	<link rel="shortcut icon" href="img/logo.png">
     <head>
     	<!-- meta charec set -->
@@ -41,14 +41,11 @@ li:hover {
         <link rel="stylesheet" href="css/main.css">
 		<!-- media-queries -->
         <link rel="stylesheet" href="css/media-queries.css">
-		<!-- Login -->
+		<!-- Login Page -->
 				<link rel="stylesheet" href="css/enigma_custom.css">
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-
-
-
     </head>
 
     <body id="body">
@@ -86,19 +83,22 @@ li:hover {
                     <ul id="nav" class="nav navbar-nav">
                         <li class="current"><a href="#body">Home</a></li>
                         <li><a href="#features">About</a></li>
-                        <li><a href="#works">Blog</a></li>
-                        <li><a href="#team">Testimonials</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="donate.html">Donate</a></li>
-                        <li><a href="" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+												<li><a href="" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
+
             </div>
         </header>
-				<!-- Login form -->
-
+        <!--
+        End Fixed Navigation
+        ====================================
+			 	Login pop up-->
 				<div id="id01" class="modal">
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
@@ -111,37 +111,54 @@ li:hover {
 				   	&times;
 					</font>
 				</span>
-      <img src="img/logo1.jpg"  alt="logo1" class="logo-login">
+      <img width="150px" height="150px" src="img/logo1.png"  alt="logo1" class="logo-login">
     </div>
 		<font color="Black">
-    <div class="container">
-      <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username  :</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required><br>
+    <div class="container1"><center>
+      <label><b>&nbsp;&nbsp;Email Id.  :</b></label>
+      <input type="text" placeholder="Enter Email id." name="uname" required><br>
 
-      <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password  :</b></label>
+      <label><b>Password  :</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required><br></font>
 
-      <center><button type="submit">Login</button></center>
-      <center><input type="checkbox" checked="checked"> Remember me</center>
+      <button type="submit">Login</button><br>
+      <input type="checkbox" checked="checked"><font color='#212121'>Remember me</font></center>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="signup">&nbsp;&nbsp;Signup</button>
-      <span class="psw"><a href="#"><font color='#F58F0E'>Forgot Password ?</font></a></span>
+    <div class="container1" style="background-color:#fdffc4">
+      <button type="button" onclick="document.getElementById('id02').style.display='block'">&nbsp;&nbsp;Signup</script></button>
+      <span class="psw"><a href="#"><font color='#13967c'>Forgot Password ?</font></a></span>
     </div>
   </form>
 </div>
+				<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php">
+		<div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal"><font color='red'></script>&times;</font></span>
+      <img width="150px" height="150px" src="img/sign.png"  alt="logo1" class="logo-login">
+    </div>
+    <div class="container1"><center>
+			<font color="Black">
+			<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name  :</b></label>
+			<input type="text" placeholder="Enter Name" name="name" required><br>
+			<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email Id.  :</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required><br>
+			<label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password  :</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+			<label><b>Confirm Password  :</b></label>
+      <input type="password" placeholder="Confirm Password" name="psw-repeat" required><br></font>
+      <input type="checkbox" checked="checked"><font color='#212121'>By creating an account you agree to our </font><a href="#">Terms & Privacy</a>
 
-        <!--
-        End Fixed Navigation
-        ==================================== -->
-
-
-
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div></center>
+    </div>
+  </form>
+</div>
         <!--
         Home Slider
         ==================================== -->
-				
+
 
 
 		<section id="slider">
@@ -162,7 +179,7 @@ li:hover {
 						<div class="carousel-caption">
 							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span class="color">Workshop</span>!</h2>
 							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><b>On</b><span style="font-weight: bold;"></span></h3>
-						
+
 							<p data-wow-duration="1000ms" class="wow slideInRight animated"><a href="#" class="btn btn-info" role="button">Coming Soon!</a></p>
 
 							<ul class="social-links text-center">
@@ -640,7 +657,7 @@ li:hover {
 			<!-- Google map -->
 			<div id="map" style="width:1350px;height:380px" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
 
-			
+
 			<script>
 
 			<script src = "https://maps.googleapis.com/maps/api/js"></script>
@@ -668,9 +685,9 @@ li:hover {
   var map = new google.maps.Map(mapCanvas, mapOptions);
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
-                
+
 }
-</script> 
+</script>
 
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBM8R0qswZUlg1zKSgyDHoeVMdf_XE66Ic&callback=myMap"></script>
 
