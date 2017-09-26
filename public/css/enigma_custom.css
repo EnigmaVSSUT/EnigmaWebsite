@@ -98,6 +98,13 @@ span.psw {
     border-radius: 50%;
 }
 
+.pm-button{
+    margin: auto !important; 
+    width: 50% !important;
+    border: 3px;
+    padding: 10px;
+}
+
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
