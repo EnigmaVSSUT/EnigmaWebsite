@@ -362,10 +362,13 @@
 
 			if(GET["type"] == "failed"){
 				document.getElementById("paymentinfo").innerHTML = "Sorry the payment has been failed due to some reasons! Please try again. <br> For queries, contact team@enigmavssut.site";
+				document.getElementById("paymentinfo").style.color = "red";
 			}else if(GET["type"] == "success"){
 				document.getElementById("paymentinfo").innerHTML = "Payment has successfully been received. You will receive a confirmation mail soon.<br> For queries, contact team@enigmavssut.site";
+				document.getElementById("paymentinfo").style.color = "green";
 			}else if(GET["type"] == "faileduser"){
 				document.getElementById("paymentinfo").innerHTML = "Sorry the payment has been failed due to cancellation! Please try again. <br> For queries, contact team@enigmavssut.site";
+				document.getElementById("paymentinfo").style.color = "red";
 			}
 		</script>
 
