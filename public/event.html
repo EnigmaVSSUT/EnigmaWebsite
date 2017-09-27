@@ -163,7 +163,7 @@
         		<div class="row" style="margin-top: -20px !important;">
 
         			<div class="sec-sub-title text-center" data-wow-duration="500ms" style="visibility: visible;">
-        				<div class="pm-button"><span style="background-color: #0feb9e; color: #fdfdfd; font-weight: bold; padding: 10px; padding-right: 50px;  padding-left: 50px;     "><a href="https://www.payumoney.com/paybypayumoney/#/360835">&nbsp;&nbsp;&nbsp;&nbsp;Pay Registration Fee!</a></span><br><br><br><b>Ensure, that you have registered and paid successfully for the workshop to attend!</b></div>
+        				<div class="pm-button"><span style="background-color: #0feb9e; color: #fdfdfd; font-weight: bold; padding: 10px; padding-right: 50px;  padding-left: 50px;     "><a href="https://www.payumoney.com/paybypayumoney/#/360835">&nbsp;&nbsp;&nbsp;&nbsp;Pay Registration Fee!</a></span><br><br><br><b><p id="paymentinfo">Ensure, that you have registered and paid successfully for the workshop to attend!</p></b></div>
         			</div>
 
         		</div>
@@ -346,6 +346,27 @@
 			ga('create', 'UA-105685571-1', 'auto');
 			ga('send', 'pageview');
 
+		</script>
+		<script>
+			var GET = {};
+			var query = window.location.search.substring(1).split("&");
+			for(var i = 0, max = query.length; i<max; i++)
+			{
+				if(query[i]==="")
+					continue;
+				
+				var param = query[i].split("=");
+				GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+			}
+			console.log(GET["type"]);
+
+			if(GET["type"] == "failed"){
+				document.getElementById("paymentinfo").innerHTML = "Sorry the payment has been failed due to some reasons! Please try again. <br> For queries, contact team@enigmavssut.site";
+			}else if(GET["type"] == "success"){
+				document.getElementById("paymentinfo").innerHTML = "Payment has successfully been received. You will receive a confirmation mail soon.<br> For queries, contact team@enigmavssut.site";
+			}else if(GET["type"] == "faileduser"){
+				document.getElementById("paymentinfo").innerHTML = "Sorry the payment has been failed due to cancellation! Please try again. <br> For queries, contact team@enigmavssut.site";
+			}
 		</script>
 
 	</body>
