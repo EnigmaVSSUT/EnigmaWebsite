@@ -4,10 +4,6 @@
     position: center;
 }
 
-img.avatar {
-    width: 33%;
-    border-radius: 35%;
-}
 /* The Close Button (x) */
 .close {
     position: absolute;

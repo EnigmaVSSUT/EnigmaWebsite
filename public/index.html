@@ -90,7 +90,7 @@ li:hover {
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="donate.html">Donate</a></li>
-                        <li><a href="" data-toggle="modal" data-target=".bs-modal-sm" >Login</a></li>
+                        <li><a href="" data-toggle="modal" data-target=".bs-modal" >Login</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -98,15 +98,15 @@ li:hover {
         </header>
         <!-- Login form -->
 
-          <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm" >
+          <div class="modal fade bs-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" >
    
     <div class="modal-content" >
      <div class="imgcontainer">
         <button type="button" class="close" aria-label="Close" data-dismiss="modal">
          <span aria-hidden="true">&times;</span>
         </button>
-      <img src="img/logo1.jpg" alt="Avatar" class="avatar">
+      <img src="img/logo1.jpg" alt="Avatar" class="img-circle" width="20%">
     </div>
         <br>
         <div class="bs-example bs-example-tabs">
@@ -125,7 +125,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="userid">User Name:</label>
               <div class="controls">
-                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="xyz012" class="input-medium" required="">
+                <input required="true" id="userid" name="userid" type="text" class="form-control" placeholder="xyz012" class="input-medium" required="true">
               </div>
             </div>
 
@@ -133,7 +133,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="passwordinput">Password:</label>
               <div class="controls">
-                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                <input required="true" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
               </div>
             </div>
 
@@ -168,7 +168,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="Email">Email:</label>
               <div class="controls">
-                <input id="Email" name="Email" class="form-control" type="text" placeholder="abc@xyz.com" class="input-large" required="">
+                <input id="Email" name="Email" class="form-control" type="email" placeholder="abc@xyz.com" class="input-large" required="true">
               </div>
             </div>
 
@@ -176,7 +176,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="userid">Enter Mobile No.</label>
               <div class="controls">
-                <input id="userid" name="userid" class="form-control" type="text" placeholder="0123456789" class="input-large" required="">
+                <input id="userid" name="userid" class="form-control" type="number" placeholder="0123456789" class="input-large" required="true">
               </div>
             </div>
 
@@ -185,7 +185,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="userid">Choose a User Name</label>
               <div class="controls">
-                <input id="userid" name="userid" class="form-control" type="text" placeholder="abc012" class="input-large" required="">
+                <input id="userid" name="userid" class="form-control" type="userid" placeholder="abc012" class="input-large" required="true">
               </div>
             </div>
             
@@ -193,7 +193,7 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="password">Password:</label>
               <div class="controls">
-             <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+             <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="true">
               </div>
             </div>
             
@@ -201,17 +201,26 @@ li:hover {
             <div class="control-group">
               <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
               <div class="controls">
-                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="nput-large" required="true">
               </div>
-            </div>
+            </div><br>
             
+            <!-- Choose Registration Card-->
+            <div class="control-group">
+                Choose Registration Card :<input id="regcard" type="file" value="Registration Card Image">
+
+                
+            </div>                    
+
+
+
             <!-- Check box for t&c -->
             <br>
             <div class="control-group">
               <div class="controls">
                 <label class="check" for="termcond">
                     <center>
-                  <input type="checkbox" name="tc" id="term1" value="1" > I accept the Terms and Services</label>
+                  <input type="checkbox" name="tc" id="term1" value="1" required="true"> I accept the Terms and Services</label>
               </center>
               </div>
             </div>
