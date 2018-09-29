@@ -1,3 +1,15 @@
+
+$(window).on('load', function(){
+	$('#loaderSvgWrapper').fadeOut(500);
+	
+	$('#preloader').delay(350).fadeOut('slow',3000);
+	$('body').delay(350).css({'overflow':'visible'});
+	var delayInMilliseconds = 3000; //1 second
+
+
+}); 
+
+
 function writeDatabase() {
 
 	var name = document.getElementById("name").value;
