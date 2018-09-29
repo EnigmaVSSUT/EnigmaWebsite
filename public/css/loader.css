@@ -1,0 +1,98 @@
+
+
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  a {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: 12;
+  }
+  
+  .container1 {
+    position: absolute;
+    animation: rotate 3s linear infinite;
+  }
+  .container1:last-of-type {
+    z-index: -1;
+    margin: 1%;
+  }
+  
+  .triangle {
+    position: relative;
+    text-align: left;
+    transform-origin: 33.33% 66.66%;
+  }
+  .triangle:before, .triangle:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+  }
+  .triangle, .triangle:before, .triangle:after {
+    width: 2.3em;
+    height: 2.3em;
+    border-top-right-radius: 20%;
+  }
+  .triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+  }
+  .triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+  }
+  .triangle:first-of-type {
+    background: #ff1668;
+    transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866) translate(143.33%, 110%);
+    animation: first 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  }
+  .triangle:last-of-type {
+    background: #1626f5;
+    transform: rotate(0deg) skewX(-30deg) scale(1, 0.866) translate(-100%, -4%);
+    animation: last 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  }
+  .triangle.shadow, .triangle.shadow:before, .triangle.shadow:after {
+    background: #a0f5d0;
+    backface-visibility: hidden;
+    perspective: 1000;
+    filter: blur(0.5em);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes first {
+    0% {
+      transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866) translate(143.33%, 110%);
+    }
+    33% {
+      transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866) translate(-76.67%, -120%);
+    }
+    66% {
+      transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866) translate(-76.67%, 112%);
+    }
+  }
+  @keyframes last {
+    0% {
+      transform: rotate(0deg) skewX(-30deg) scale(1, 0.866) translate(-100%, -4%);
+    }
+    33% {
+      transform: rotate(0deg) skewX(-30deg) scale(1, 0.866) translate(134%, -4%);
+    }
+    66% {
+      transform: rotate(0deg) skewX(-30deg) scale(1, 0.866) translate(-89%, -214%);
+    }
+  }
+  

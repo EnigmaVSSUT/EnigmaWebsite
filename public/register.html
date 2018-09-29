@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+
+
+			<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+			<script>
+			var config = {
+    apiKey: "AIzaSyBoPLusOfHm9JkDlu5g5khMOZ8jbMxWdNU",
+    authDomain: "enigma-reg.firebaseapp.com",
+    databaseURL: "https://enigma-reg.firebaseio.com",
+    projectId: "enigma-reg",
+    storageBucket: "enigma-reg.appspot.com",
+    messagingSenderId: "666816832491"
+  };
+  firebase.initializeApp(config);
+			var db=firebase.database();
+				var ctr=0;
+ 				db.ref('/users/').on("value", function(snapshot) {
+					ctr=snapshot.numChildren();
+              });
+			</script>
+					<script src="js/nlform.js"></script>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Registration Form</title>
+		<meta name="keywords" content=" sentence form, text input, contenteditable, html5, css3, jquery" />
+		
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/result.css" /> -->
+		<script src="js/anim.js"></script>
+
+		<!-- <link rel="stylesheet" type="text/css" href="css/loader.css" /> -->
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/fdatab.js"></script>
+
+		<!-- <script type="text/javascript" src="js/script.js"></script> -->
+	</head>
+	<body class="nl-blurred hero-bkg-animated" >
+
+		<div class="container" >
+			<!-- Top Navigation -->
+			<header>
+				<div>
+				<img src="img/logo.jpg" width="10%" height="10%" />
+				<h1><b>Enigma: The Coding Club</b>
+					<span style="color:rgba(93, 168, 139, 0.719)">Orientation Registration Form</span></h1>
+			</header>
+			<div class="main clearfix ">
+			<div class="container" id="success" style="display:none;"><center>	<div  class="card" >
+					You Have Registered Successfully 
+					<br><img src="data:image/png;base64,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">
+				</div></center></div>
+				<div id="aftsc">
+				<form id="nl-form" class="nl-form card" style="display:block">
+					I am
+					<input type="text" id="name" name="name" placeholder="Your name" data-subline="For example: <em>Steve Job</em>" required/>
+					<br>having Regd. No.<br>
+					<input type="text" id="regn" name="Regd" placeholder="Your Regd No." data-subline="For example: <em>1602041047</em>" required/>
+					<br>of
+					<select id="branch">
+						<option value="CM">CM</option>
+						<option value="CE">CE</option>
+						<option value="CSE">CSE</option>
+						<option value="" selected>Branch</option>
+						<option value="EEE">EEE</option>
+						<option value="EE">EE</option>
+						<option value="ETC">ETC</option>
+						<option value="IT">IT</option>
+						<option value="ME">ME</option>
+						<option value="MME">MME</option>
+						<option value="PE">PE</option>
+					</select>
+					currently in
+					<!-- <br />in <p id="demo" style="color: red;"></p> -->
+					<select id="sem">
+					 	<option value="1" selected>1st</option>
+					 	<option value="3">3rd</option>
+					 	<option value="5">5th</option>
+						<option value="7">7th</option>
+					</select>
+					Sem. having <input type="text" id="interest" value="" placeholder="Area of interest" data-subline="For example: <em>Web/Android/ML/AI/Open Source etc.</em>" required/>
+				as field of interest and Want to take part in Enigma Orientation Program.<br>
+				<div>
+					<input type="number" id="mobile" value="" maxlength="10" placeholder="Mobile No." data-subline="For example: <em>1234567890</em>" required/><br>
+					<input type="email" id="email" value="" name="Email" placeholder="Email" data-subline="For example: <em>enigmavssut@gmail.com</em>" required/>
+				</div>
+				<div class="nl-submit-wrap" style="	padding-bottom: 3%; 	">
+						<center><button class="button nl-submit" onclick="writeDatabase()"><span>Submit</span></button></center>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+
+			</div>
+		</div><!-- /container -->
+		
+		<script>
+						var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+
+	</script>
+	</body>
+</html>
