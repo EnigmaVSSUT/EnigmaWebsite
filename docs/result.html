@@ -1,0 +1,67 @@
+<html>
+    <header>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/result.css" />
+<link rel="stylesheet" type="text/css" href="css/loader.css" />
+
+
+
+
+</header>
+<!------ Include the above in your HEAD tag ---------->
+<body class="hero-bkg-animated">
+    <div class="container1" id="c1">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+      </div>
+      <div class="container1" id="c2">
+        <div class="triangle shadow"></div>
+        <div class="triangle shadow"></div>
+      </div>
+        
+
+
+<center><div class="container " id="mainb" style="display:none;">
+        
+    <div class="row">
+        <!-- Card Projects -->
+        <div  >
+            <div class="card" >
+              <center>  <div class="card-image"  >
+                    <img class="img-responsive" src="img/logo.jpg" >
+                </div>
+            </center> 
+                <div class="card-content" style="background-color:rgb(6, 172, 163)">
+                    <p style="color:lightsalmon" ><b>Your Response Has Been Recorded !! <br>See Ya Soon</b></p></style>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+<script>
+
+     demo();
+     function sleep(ms) {
+   return new Promise(resolve => setTimeout(resolve, ms));
+   }
+
+ async function demo() {
+   console.log('Taking a break...');
+   await sleep(2000);
+   console.log('Two seconds later');
+   document.getElementById("c1").style.display="none";
+   document.getElementById("c2").style.display="none";
+
+   $('#mainb').show();
+  
+//document.getElementById("mainb").style.display="show";
+
+ }
+</script>
+
+</body>
+</html>
