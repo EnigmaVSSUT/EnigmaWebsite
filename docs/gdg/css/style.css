@@ -659,7 +659,7 @@ h1, h2, h3, h4, h5,
 .speaker {
   margin-bottom: 50px; }
   .speaker .name {
-    left: -80px;
+    left: -10px;
     position: relative; }
     @media (max-width: 1199.98px) {
       .speaker .name {
