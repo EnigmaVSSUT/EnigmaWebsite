@@ -1,0 +1,734 @@
+<html>
+    <head>
+        <title>FeedBack</title>
+    </head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB_vGd1SQoXjtx7QXn0ZXdSz2icSkGIRos",
+        authDomain: "enigma-feed.firebaseapp.com",
+        databaseURL: "https://enigma-feed.firebaseio.com",
+        projectId: "enigma-feed",
+        storageBucket: "",
+        messagingSenderId: "134590752384"
+      };
+      firebase.initializeApp(config);
+    
+    var db1=firebase.database();
+    var db2=firebase.database();
+    var ctr1=0,ctr2=0;
+    db1.ref("/feedback1/").on("value", function(snapshot) {
+    ctr1=snapshot.numChildren();
+    console.log("f1 = "+ctr1);
+  });
+    db2.ref("/feedback2/").on("value", function(snapshot) {
+    ctr2=snapshot.numChildren();
+    console.log("f2 = "+ctr2);
+  });
+  
+  </script>
+    <style>
+    /*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background: rgb(7, 148, 148); /* fallback for old browsers */
+}
+body {
+  width: 100%;
+  height: 100%;
+    font-family: montserrat, arial, verdana;
+    background: transparent;
+}
+/*form styles*/
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+#msform fieldset {
+  background: rgb(240, 239, 239);
+  border: 0 none;
+  border-radius: 0px;
+  padding: 5% 5%;
+  box-sizing: border-box;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 1em;
+}
+#msform input:focus, #msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #0fbeca;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+/*buttons*/
+#msform .action-button {
+  width: 20%;
+  background: #12c2b3;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #67f1ac;
+}
+#msform .action-button-previous {
+  width: 20%;
+  background: #C5C5F1;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+/*headings*/
+.fs-title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  overflow: visible;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 0.9em;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+  background: #2aee65;
+  color: white;
+}
+* {
+  outline: 0;
+  font-family: sans-serif
+}
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5% 0 5%;
+  display: inherit
+}
+.container {
+  width: 100%;
+  margin: 50px auto 0;
+  text-align: center
+}
+/*Styling Selectbox*/
+.dropdown {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .5s ease;
+  position: relative;
+  font-size: 1.5em;
+  color: #474747;
+  height: 7%;
+  text-align: left
+}
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 2%;
+}
+.dropdown .select > i {
+    font-size: 1em;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown:active {
+    background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 5px 5px 0 0;
+    background-color: #f8f8f8
+}
+.dropdown.active .select > i {
+    transform: rotate(-90deg)
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 5px 5px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+.dropdown .dropdown-menu li {
+    padding: 2%;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+*:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.clearfix {
+  clear:both;
+}
+.text-center {text-align:center;}
+a {
+  color: tomato;
+  text-decoration: none;
+}
+a:hover {
+  color: #2196f3;
+}
+pre {
+display: block;
+padding: 9.5px;
+margin: 0 0 10px;
+font-size: 13px;
+line-height: 1.42857143;
+color: #333;
+word-break: break-all;
+word-wrap: break-word;
+background-color: #F5F5F5;
+border: 1px solid #CCC;
+border-radius: 4px;
+}
+.header {
+  padding:20px 0;
+  position:relative;
+  margin-bottom:10px;
+  
+}
+.header:after {
+  content:"";
+  display:block;
+  height:1px;
+  background:#eee;
+  position:absolute; 
+  left:30%; right:30%;
+}
+.header h2 {
+  font-size:3em;
+  font-weight:300;
+  margin-bottom:0.2em;
+}
+.header p {
+  font-size:14px;
+}
+#a-footer {
+  margin: 20px 0;
+}
+.new-react-version {
+  padding: 20px 20px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+  
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.new-react-version .react-svg-logo {
+  text-align: center;
+  max-width: 60px;
+  margin: 20px auto;
+  margin-top: 0;
+}
+.success-box {
+  margin:50px 0;
+  padding:10px 10px;
+  border:1px solid #eee;
+  background:#f9f9f9;
+}
+.success-box img {
+  margin-right:10px;
+  display:inline-block;
+  vertical-align:top;
+}
+.success-box > div {
+  vertical-align:top;
+  display:inline-block;
+  color:#888;
+}
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  
+}
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:2em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
+    </style>
+    <body>
+        <!-- MultiStep Form -->
+        <div class="container">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 scrollable" >
+       <center> <img src="img/logo1.jpg" class="img-responsive" style="width: 20%; height: 15%; margin-top: 2%;border-radius: 10%;" ></center>
+        <form id="msform">
+          <!-- progressbar -->
+          <ul id="progressbar">
+            <li class="active">Details</li>
+            <li>Feedback</li>
+            <li>Finish</li>
+          </ul>
+          <!-- fieldsets -->
+          <fieldset>
+           
+            <h2 class="fs-title">Details</h2>
+            <h3 class="fs-subtitle">Tell us something  about you</h3>
+            <div class="container">
+              
+                  <div class="dropdown">
+                    <div class="select">
+                      <span>Select Branch </span>
+                      <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input required type="hidden" name="gender">
+                    <ul class="dropdown-menu">
+                      <li id="CE">CE</li>
+                      <li id="CSE">CSE</li>
+                      <li id="CM">CM</li>
+                      <li id="EE">EE</li>             
+                      <li id="EEE">EEE</li>
+                      <li id="ETC">ETC</li>
+                      <li id="IT">IT</li>
+                      <li id="ME">ME</li>
+                      <li id="MME">MME</li>
+                      <li id="PE">PE</li> 
+                    </ul>
+                  </div>
+              
+              <span class="msg"></span>
+            </div>
+            
+            <input required id="phone" type="number" name="phone" placeholder="Phone" style="    border-radius: 5px 5px 5px 5px;  " onkeyup="validPhone();" />
+            <span id="confirmMessage" class="confirmMessage" style="color: red;"> Select Branch And Enter Phone No. To Proceed</Select></span>
+
+           <input type="button" id="bt1" name="next" class="next action-button"  value="Next"   />
+          </fieldset>
+          <fieldset>
+            <h2 class="fs-title">About the Orientation Programme</h2>
+            <h3 class="fs-subtitle">Your Valuable Feedback</h3>
+                      <textarea required minlength="5" class="textarea" style="border-radius: 5px 5px 5px 5px;" type="textarea" name="comments" id="inter" placeholder="Give Feedback/Comments Here and also Tell us your areas Of Interest (eg- Competitive Coding, Android App Development, Web Development, Machine Learning ,OpenSoure etc)" maxlength="100" rows="2"></textarea>
+            
+
+            <p>On a Scale Of 1 to 5  rate the Enigma Orientation Programme </p>
+                      <section class='rating-widget'>
+  
+                          <!-- Rating Stars Box -->
+                          <div class='rating-stars text-center'>
+                            <ul id='stars'>
+                              <li class='star' title='Poor' data-value='1'>
+                                <i class='fa fa-star fa-fw'></i>
+                              </li>
+                              <li class='star' title='Fair' data-value='2'>
+                                <i class='fa fa-star fa-fw'></i>
+                              </li>
+                              <li class='star' title='Good' data-value='3'>
+                                <i class='fa fa-star fa-fw'></i>
+                              </li>
+                              <li class='star' title='Excellent' data-value='4'>
+                                <i class='fa fa-star fa-fw'></i>
+                              </li>
+                              <li class='star' title='WOW!!!' data-value='5'>
+                                <i class='fa fa-star fa-fw'></i>
+                              </li>
+                            
+                              
+                            </ul>
+                          </div>
+                          
+                              <div class='text-message'></div>
+                          
+                          
+                          
+                        </section>
+    <span id="confirmMessage2" class="confirmMessage2" style="color: red;"> Select Rating To Proceed</span>
+       
+            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+            <input type="button" name="next" id="final" class="next action-button" value="Submit" style="display: none" onclick="writeVal();"/>
+          </fieldset>
+          <fieldset style="background: transparent;">
+              <img src="data:image/png;base64,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"> Thank You 
+
+           
+          </fieldset>
+        </form>
+
+      </div>
+</div></div>
+    </body>
+
+    <script>
+    
+    var ratingValue = 0;
+var phone;
+var branch=0;
+var goodColor = '#66cc66';
+ var badColor = '#ff6666';
+ var area;
+/*Dropdown Menu*/
+$('.dropdown').click(function () {
+	$(this).attr('tabindex', 1).focus();
+	$(this).toggleClass('active');
+	$(this).find('.dropdown-menu').slideToggle(300);
+});
+$('.dropdown').focusout(function () {
+	$(this).removeClass('active');
+	$(this).find('.dropdown-menu').slideUp(300);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+	$(this).parents('.dropdown').find('span').text($(this).text());
+	$(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+});
+/*End Dropdown Menu*/
+function validPhone()
+  {
+	var message = document.getElementById('confirmMessage');
+	
+	  phone = document.getElementById('phone').value;
+	  var message = document.getElementById('confirmMessage');
+	  if(phone.length==10)
+	  {	  
+		message.innerHTML = "";
+		//phone.style.backgroundColor = 'green';
+        message.style.color = 'orange';
+		if(branch==0)
+		{
+			message.innerHTML = "Select branch to proceed";
+			document.getElementById("bt1").style.display='none';
+		}
+		else{			document.getElementById("bt1").style.display='inline-block';
+						document.getElementById("bt1").style.al;
+		}
+	  }
+	  else
+	  {	  
+		
+		// phone.style.backgroundColor = 'red';
+		 message.style.color = 'red';
+		 message.innerHTML = "Enter 10 digit phone number to proceed";
+		//alert(phone.length);
+		document.getElementById("bt1").style.display='none';
+		
+	  }
+  }
+$('.dropdown-menu li').click(function () {
+ branch =  $(this).parents('.dropdown').find('input').val();
+//  document.getElementById("bt1").style.display='block';
+//  message.innerHTML = "Select branch to proceed";
+validPhone();
+ 
+ 
+  
+}); 
+$(document).ready(function(){
+  
+	/* 1. Visualizing things on Hover - See next part for action on click */
+	$('#stars li').on('mouseover', function(){
+	  var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+	 
+	  // Now highlight all the stars that's not after the current hovered star
+	  $(this).parent().children('li.star').each(function(e){
+		if (e < onStar) {
+		  $(this).addClass('hover');
+		}
+		else {
+		  $(this).removeClass('hover');
+		}
+	  });
+	  
+	}).on('mouseout', function(){
+	  $(this).parent().children('li.star').each(function(e){
+		$(this).removeClass('hover');
+	  });
+	});
+	
+	
+	/* 2. Action to perform on click */
+	$('#stars li').on('click', function(){
+	  var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+	  var stars = $(this).parent().children('li.star');
+	  
+	  for (i = 0; i < stars.length; i++) {
+		$(stars[i]).removeClass('selected');
+	  }
+	  
+	  for (i = 0; i < onStar; i++) {
+		$(stars[i]).addClass('selected');
+	  }
+	  
+	  // JUST RESPONSE (Not needed)
+		ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+		
+	  var message2 = document.getElementById('confirmMessage2');
+	  message2.innerHTML = "";
+	  document.getElementById("final").style.display='inline-block';
+	  
+	 
+	  
+	});
+	
+	
+  });
+  function writeVal()
+  {
+	  area=document.getElementById('inter').value;
+    ctr2+=1;
+	  db1.ref('feedback1/' + phone).set({
+		Branch: branch,
+		Phone: phone,
+		Rating : ratingValue,
+		Area: area
+	  });
+    db1.ref("/feedback1/").on("value", function(snapshot) {
+  var ctr=snapshot.numChildren();
+  if(ctr!=ctr1)
+  {
+    ctr1=ctr;
+  }
+  });
+    db2.ref('feedback2/' + ctr2).set({
+		Branch: branch,
+		Phone: phone,
+		Rating : ratingValue,
+		Area: area
+	  });
+  }
+    </script>
+    <script>
+        
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+$(".submit").click(function(){
+	return false;
+})
+    </script>
+
+<script>
+    $(function(){
+        $(".input-star-rate").on("click", function(){
+            var $this = $(this); //  assign $(this) to $this
+            var ratingValue = $this.val();  // use '.val()' as shown here
+            //alert(ratingValue);
+        });
+    });
+    
+    document.getElementById("bt1").style.display='none';
+    
+    
+      
+    
+    </script>
+</html>

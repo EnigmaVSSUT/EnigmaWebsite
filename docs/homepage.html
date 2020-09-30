@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<style>
+li:hover {
+    opacity: 0.7;
+}
+</style>
+<link rel="shortcut icon" href="img/logo.png">
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Page Title -->
+    <title>Enigma - The Coding Club</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Club Website And Blog">
+    <meta name="keywords" content="Club,Website,Blog,Enigma,vssut,burla,sambalpur,cse,department">
+    <meta name="author" content="Team Enigma">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Font -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- CSS
+            ================================================== -->
+            <!-- Fontawesome Icon font -->
+            <link rel="stylesheet" href="css/font-awesome.min.css">
+            <!-- Twitter Bootstrap css -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <!-- jquery.fancybox  -->
+            <link rel="stylesheet" href="css/jquery.fancybox.css">
+            <!-- animate -->
+            <link rel="stylesheet" href="css/animate.css">
+            <!-- Main Stylesheet -->
+            <link rel="stylesheet" href="css/main.css">
+            <!-- media-queries -->
+            <link rel="stylesheet" href="css/media-queries.css">
+            <!-- Login -->
+            <link rel="stylesheet" href="css/enigma_custom.css">
+
+            <!-- Modernizer Script for old Browsers -->
+            <script src="js/modernizr-2.6.2.min.js"></script>
+
+
+
+        </head>
+
+        <body id="body">
+
+            <!-- preloader -->
+            <div id="preloader">
+                <img src="img/preloader.gif" alt="Preloader">
+            </div>
+            <!-- end preloader -->
+
+        <!--
+        Fixed Navigation
+        ==================================== -->
+        <header id="navigation" class="navbar-fixed-top navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars fa-2x"></i>
+                    </button>
+                    <!-- /responsive nav button -->
+
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#body">
+                        <h1 id="logo">
+                            <img src="img/logo.png" alt="Brandi" style="height: 50px">
+                        </h1>
+                    </a>
+                    <!-- /logo -->
+                </div>
+
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li class="current"><a href="#body">Home</a></li>
+                        <li><a href="#features">About</a></li>
+                        <li><a href="#works">Work</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+                    </ul>
+                </nav>
+                <!-- /main nav -->
+            </div>
+        </header>
+        <!-- Login form -->
+
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+                <font color='red'>
+
+                    <!-- Call Login JS -->
+                    <script src="js/login1_js.js"></script>
+
+                    &times;
+                </font>
+            </span>
+            <img src="img/logo1.jpg"  alt="logo1" class="logo-login">
+        </div>
+        <font color="Black">
+            <div class="container">
+              <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username  :</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+              <label><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password  :</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required><br></font>
+
+              <center><button type="submit">Login</button></center>
+              <center><input type="checkbox" checked="checked"> Remember me</center>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="signup">&nbsp;&nbsp;Signup</button>
+              <span class="psw"><a href="#"><font color='#F58F0E'>Forgot Password ?</font></a></span>
+          </div>
+      </form>
+  </div>
+
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+
+
+
+        <!--
+        Home Slider
+        ==================================== -->
+        
+
+
+        <section id="slider">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators bullet -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+                <!-- End Indicators bullet -->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- single slide -->
+                    <div class="item active" style="background-image: url(img/banner2.jpg);">
+                        <div class="carousel-caption">
+                            <div class="wrapper">
+                                <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span>Enigma</span>!</h2>
+                                <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color"><b>The Coding</b></span><span style="font-weight: bold;"> Club</span></h3>
+                                <p data-wow-duration="500ms" class="wow slideInRight animated">VSSUT</p>
+
+                                <ul class="social-links text-center">
+                                    <li><a href="http://www.vssut.ac.in/"><i class="fa fa-globe fa-lg" style="color:#0fea9d;"></i></a></li>
+                                    <li><a href="https://www.facebook.com/enigma.vssut/?ref=br_rs"><i class="fa fa-facebook fa-lg" style="color:#0fea9d;"></i></a></li>
+                                    <li><a href="https://www.enigma.vssut@gmail.com"><i class="fa fa-google-plus fa-lg" style="color:#0fea9d;"></i></a></li>
+                                    <!--<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- end single slide -->
+
+                        <!-- single slide -->
+                    </div>
+                    <div class="item" style="background-image: url(img/workshop2.jpg);">
+                        <div class="carousel-caption">
+                            <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span class="color">Workshop</span>!</h2>
+                            <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><b>on</b><span style="font-weight: bold;"></span></h3>
+                            
+                            <p data-wow-duration="1000ms" class="wow slideInRight animated"  style="text-align: center; font-size: 20px; color:#0fea9d; "><a class="btn btn-info" role="button">Event Details</a></p>
+                            <ul class="social-links text-center">
+                                <li><a href="http://www.vssut.ac.in/"><i class="fa fa-globe fa-lg" style="color:#0fea9d;"></i></a></li>
+                                <li><a href="https://www.facebook.com/enigma.vssut/?ref=br_rs"><i class="fa fa-facebook fa-lg" style="color:#0fea9d;"></i></a></li>
+                                <li><a href="https://www.enigma.vssut@gmail.com"><i class="fa fa-google-plus fa-lg" style="color:#0fea9d;"></i></a></li>
+                                <!--<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Wrapper for slides -->
+
+
+                </div>
+            </div>
+                </section>        <!--
+        End Home SliderEnd
+        ==================================== -->
+        <!-- <div class="pm-button"><a href="https://www.payumoney.com/paybypayumoney/#/360835"><img src="http://www.glss.net/portals/0/Images/Required/PaymentButton.png" /></a></div> -->
+        <!--
+        Features
+        ==================================== -->
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="row">
+
+                    <div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+                        <h2>About Us!</h2>
+                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                    </div>
+                    <div class="sec-sub-title text-center wow fadeInBottom animated" data-wow-duration="500ms">
+                        <p>We conduct sessions and workshops, hold lectures and talks, and even host coding competitions and hackathons.<br> There is something for everyone.</p>
+                    </div>
+                    <!-- service item -->
+                    <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-github fa-2x"></i>
+                            </div>
+
+                            <div class="service-desc">
+                                <h3>Open Source</h3>
+                                <p>We encourage to contribute for open source projects. The more one contributes, the more one learns about real world projects. Open Source is the most best place to showcase your programming skills</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end service item -->
+
+                    <!-- service item -->
+                    <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-pencil fa-2x"></i>
+                            </div>
+
+                            <div class="service-desc">
+                                <h3>Competitive Coding</h3>
+                                <p>Learning the algorithms and their usage will never dissapoint one. Along with frequent programming contests and preparation for big events; We learn, We share. Think Twice, Code Once!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end service item -->
+
+                    <!-- service item -->
+                    <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-bullhorn fa-2x"></i>
+                            </div>
+
+                            <div class="service-desc">
+                                <h3>Web & App Development</h3>
+                                <p>The number of algorithms you know or the number of programming languages you know, does never matter when it comes to market. Being market-ready is also one of the most important aspect in this world of programming.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end service item -->
+
+                </div>
+            </div>
+        </section>
+
+        <!--
+        End Features
+        ==================================== -->
+
+        <!--
+        Our Works
+        ==================================== -->
+
+        <section id="works" class="works clearfix">
+            <div class="container">
+                <div class="row">
+
+                    <div class="sec-title text-center">
+                        <h2>Works</h2>
+                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                    </div>
+
+                    <div class="sec-sub-title text-center">
+                        <p>The members of our club have developed numerous projects and achieved few recognitions by participating in some events</p>
+                    </div>
+
+                    <div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+                        <ul class="text-center">
+                            <li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
+                            <li><a href="javascript:;" data-filter=".branding" class="filter">Web</a></li>
+                            <li><a href="javascript:;" data-filter=".web" class="filter">App</a></li>
+                            <li><a href="javascript:;" data-filter=".logo-design" class="filter">Open Source</a></li>
+                            <li><a href="javascript:;" data-filter=".photography" class="filter">Competitive Programming</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project-wrapper">
+
+                <figure class="mix work-item web">
+                    <img src="img/works/item-1.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="By Sankar Behera" href="img/works/item-1.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Attendance Sheet App</h4>
+                        <p>By Sankar Behera</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item branding">
+                    <img src="img/works/item-2.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Web App" href="img/works/item-2.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Hotel Order System</h4>
+                        <p>By Watan Agarwal</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item branding">
+                    <img src="img/works/item-3.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Web" href="img/works/item-3.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Bank Management System</h4>
+                        <p>By Watan Agarwal & Sachin Khandelwal</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item logo-design">
+                    <img src="img/works/item-4.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Open Source" href="img/works/item-4.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Intrusion Detection System</h4>
+                        <p>By Karra Raghu Ram</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item logo-design">
+                    <img src="img/works/item-5.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Open Source" href="img/works/item-5.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Shushrut-Online Health Care System</h4>
+                        <p>By Abhilash Mishra</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item photography">
+                    <img src="img/works/item-6.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Competitive Programming:Earned 1 Silver & 5 Gold medals (Hacker Rank Weekly Contests)" href="img/works/item-6.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Milestones</h4>
+                        <p>By Karra Raghu Ram</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item photography">
+                    <img src="img/works/item-7.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Web & App: AIR-4 Saswat Sahoo Hack In The North(Hackathon,IIT Allahabad)" href="img/works/item-7.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="http://addy.host/" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/reverie-ss/" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Addy - Web Addressing System</h4>
+                        <p>By Saswat Sahoo</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item photography">
+                    <img src="img/works/item-8.jpg" alt="">
+                    <figcaption class="overlay">
+                        <ul class="social-links text-center">
+                            <li><a class="fancybox" rel="works" title="Competitive Programming: AIR-68 Shweta Bhuyan &  AIR-168 Aswin Lakra (Mega Coding Event Codeground 2016)" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a></li>
+                            <li><a class="fancybox" rel="works" href="#" target="_blank"><i class="fa fa-share-square-o fa-lg"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-user fa-lg"></i></a></li>
+                        </ul>
+                        <h4>Milestones</h4>
+                        <p>Shweta Bhuyan & Aswin Lakra</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+
+
+        </section>
+
+        <!--
+        End Our Works
+        ==================================== -->
+
+        <!--
+        Meet Our Team
+        ==================================== -->
+
+        <section id="team" class="team">
+            <div class="container">
+                <div class="row">
+
+                    <div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+                        <h2>Meet Our Team</h2>
+                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                    </div>
+
+                    <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+                        <p>The people who brought the club to this height :</p>
+                    </div>
+
+                    <!-- single member -->
+                    <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+                        <div class="member-thumb">
+                            <img src="img/team/keshow-sablaka.jpg" alt="Keshow Sablaka" class="img-responsive">
+                            <figcaption class="overlay">
+
+                                <ul class="social-links text-center">
+                                    <li><a href="https://www.linkedin.com/in/keshow-sablaka-a1044379/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                                    <li><a href="https://www.facebook.com/keshow.sablaka" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                    <li><a href="mailto:keshow.sablaka@gmail.com" target="_blank"><i class="fa fa-google-plus fa-lg" target="_blank"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </div>
+                        <h4>Keshow Sablaka</h4>
+                        <span>Founder</span>
+                    </figure>
+                    <!-- end single member -->
+
+                    <!-- single member -->
+                    <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <div class="member-thumb">
+                            <img src="img/team/abhisekh-lath.jpg" alt="Abhisek Lath" class="img-responsive">
+                            <figcaption class="overlay">
+                                <ul class="social-links text-center">
+                                    <li><a href="https://www.linkedin.com/in/abhishek-lath-747209111/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                                    <li><a href="https://www.facebook.com/abhishek.lath" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                    <li><a href="mailto:keshow.sablaka@gmail.com" target="_blank"><i class="fa fa-google-plus fa-lg"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </div>
+                        <h4>Abhisek Lath</h4>
+                        <span>Co - Founder</span>
+                    </figure>
+                    <!-- end single member -->
+
+
+                    <!-- single member -->
+                    <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="member-thumb">
+                            <img src="img/team/watan-agarwal.jpg" alt="Watan Agarwal" class="img-responsive">
+                            <figcaption class="overlay">
+                                <ul class="social-links text-center">
+                                    <li><a href="https://www.linkedin.com/in/watan-agarwal-b5a303b3/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                                    <li><a href="https://www.facebook.com/watan.agarwal.5" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                    <li><a href=""><i class="fa fa-google-plus fa-lg" target="_blank"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </div>
+                        <h4>Watan Agarwal</h4>
+                        <span>Secretary (2016)</span>
+                    </figure>
+                    <!-- end single member -->
+
+                    <!-- single member -->
+                    <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <div class="member-thumb">
+                            <img src="img/team/sachin-khandelwal.jpg" alt="Sachin Khandelwal" class="img-responsive">
+                            <figcaption class="overlay">
+                                <ul class="social-links text-center">
+                                    <li><a href="https://www.linkedin.com/in/sachinkhandelwal14/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                                    <li><a href="https://www.facebook.com/sachinmngd" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                    <li><a href=""><i class="fa fa-google-plus fa-lg" target="_blank"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </div>
+                        <h4>Sachin Khandelwal</h4>
+                        <span>Joint Secretary(2016)</span>
+                    </figure>
+                    <!-- end single member -->
+
+                </div>
+            </div>
+        </section>
+
+        <!--
+        End Meet Our Team
+        ==================================== -->
+
+        <!--
+        Some fun facts
+        ==================================== -->
+
+        <section id="facts" class="facts">
+            <div class="parallax-overlay">
+                <div class="container">
+                    <div class="row number-counters">
+
+                        <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+                            <h2>Some Fun Facts</h2>
+                            <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                        </div>
+
+                        <!-- first count item -->
+                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+                            <div class="counters-item">
+                                <i class="fa fa-clock-o fa-3x"></i>
+                                <strong data-to="88">0</strong>
+                                <!-- Set Your Number here. i,e. data-to="56" -->
+                                <p>Hours of Sessions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <div class="counters-item">
+                                <i class="fa fa-calendar fa-3x"></i>
+                                <strong data-to="17">0</strong>
+                                <!-- Set Your Number here. i,e. data-to="56" -->
+                                <p>Events Organised</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <div class="counters-item">
+                                <i class="fa fa-rocket fa-3x"></i>
+                                <strong data-to="11">0</strong>
+                                <!-- Set Your Number here. i,e. data-to="56" -->
+                                <p> Projects Delivered </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+                            <div class="counters-item">
+                                <i class="fa fa-trophy fa-3x"></i>
+                                <strong data-to="15">0</strong>
+                                <!-- Set Your Number here. i,e. data-to="56" -->
+                                <p>Awards Won</p>
+                            </div>
+                        </div>
+                        <!-- end first count item -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        End Some fun facts
+        ==================================== -->
+
+
+        <!--
+        Contact Us
+        ==================================== -->
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="row mb50">
+
+                    <div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+                        <h2>Let’s Discuss</h2>
+                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                    </div>
+
+                    <div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+                        <p>If you want to send us any feedback or suggestions,review us here</p>
+                    </div>
+
+                    <!-- contact address -->
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
+                        <div class="contact-address">
+                            <h3>Department Of CSE-IT </h3>
+                            <p>Veer Surendra Sai University Of Technology </p>
+                            <p>Burla,Sambalpur</p>
+                            <p>Odisha</p>
+                        </div>
+                    </div>
+                    <!-- end contact address -->
+
+                    <!-- contact form -->
+                    <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="contact-form">
+                            <h3>Say hello!</h3>
+                            <form action="#" id="contact-form">
+                                <div class="input-group name-email">
+                                    <div class="input-field">
+                                        <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                                    </div>
+                                    <div class="input-field">
+                                        <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+                                </div>
+                                <div class="input-group">
+                                    <input type="submit" id="form-submit" class="pull-right" value="Send message">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end contact form -->
+
+                    <!-- footer social links -->
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <ul class="footer-social">
+
+                            <li><a href="http://www.vssut.ac.in/"><i class="fa fa-globe fa-2x"></i></a></li>
+                            <!-- <li><a href="https://dribbble.com/themefisher"><i class="fa fa-dribbble fa-2x"></i></a></li> -->
+                            <li><a href="https://plus.google.com/u/0/112407145761022366487"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                            <li><a href="https://www.facebook.com/enigma.vssut/?ref=br_rs"><i class="fa fa-facebook fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer social links -->
+
+                </div>
+            </div>
+
+            <!-- Google map -->
+            <div id="map" style="width:1350px;height:380px" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+
+            
+            <script>
+                <script src = "https://maps.googleapis.com/maps/api/js"></script>
+
+                <script>
+                   function loadMap() {
+                    var mapOptions = {
+                     center:new google.maps.LatLng(20.593684, 78.96288), zoom:15,
+                     mapTypeId:google.maps.MapTypeId.ROADMAP
+                 };
+                 var map = new google.maps.Map(document.getElementById("map"),mapOptions);
+             }
+         </script>
+         <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfJZ6ord_c6joHPA9GOo_baQtTn4XoOzM&callback=initMap">
+     </script>
+            <!--<script>
+            function myMap() {
+  var myCenter = new google.maps.LatLng(21.4963968,83.90346869999996);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+                
+}
+</script> 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBM8R0qswZUlg1zKSgyDHoeVMdf_XE66Ic&callback=myMap"></script>
+    <!-- End Google map -->
+
+</section>
+
+        <!--
+        End Contact Us
+        ==================================== -->
+
+
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
+                        <div class="footer-single">
+                            <img src="img/logo-footer.png" alt="Enigma Logo" style="height: 50%; width: 50%;">
+                            <p> <br>A club dedicated to garnering coding skills and shaping the future in the coding arena.<br> Learn. Code. Develop.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="footer-single">
+                            <h6>Subscribe </h6>
+                            <form action="#" class="subscribe">
+                                <input type="text" name="subscribe" id="subscribe">
+                                <input type="submit" value="&#8594;" id="subs">
+                            </form>
+                            <p>Get regular updates about the happenings in our club and information about upcoming coding events. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <div class="footer-single">
+                            <h6>Explore</h6>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Crew</a></li>
+                                <li><a href="#">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <div class="footer-single">
+                            <h6>Support</h6>
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Conduct Workshop</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Collaborate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright text-center">
+                            Brought with <img id="love-icon" src="img/love-emoji.png" style="height: 4vh;"> to you by <a href="#" style="font-weight: bold;">Team Enigma!</a><br>Copyright ©2017 <a href="#" style="font-weight: bold;">Enigma-The Coding Club</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+
+        <!-- Essential jQuery Plugins
+            ================================================== -->
+            <!-- Main jQuery -->
+            <script src="js/jquery-1.11.1.min.js"></script>
+            <!-- Single Page Nav -->
+            <script src="js/jquery.singlePageNav.min.js"></script>
+            <!-- Twitter Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            <!-- jquery.fancybox.pack -->
+            <script src="js/jquery.fancybox.pack.js"></script>
+            <!-- jquery.mixitup.min -->
+            <script src="js/jquery.mixitup.min.js"></script>
+            <!-- jquery.parallax -->
+            <script src="js/jquery.parallax-1.1.3.js"></script>
+            <!-- jquery.countTo -->
+            <script src="js/jquery-countTo.js"></script>
+            <!-- jquery.appear -->
+            <script src="js/jquery.appear.js"></script>
+            <!-- Contact form validation -->
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+            <!-- Google Map -->
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+            <!-- jquery easing -->
+            <script src="js/jquery.easing.min.js"></script>
+            <!-- jquery easing -->
+            <script src="js/wow.min.js"></script>
+            <script>
+                var wow = new WOW ({
+                boxClass:     'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset:       120,          // distance to the element when triggering the animation (default is 0)
+                mobile:       false,       // trigger animations on mobile devices (default is true)
+                live:         true        // act on asynchronously loaded content (default is true)
+            }
+            );
+                wow.init();
+            </script>
+            <!-- Custom Functions -->
+            <script src="js/custom.js"></script>
+
+            <script type="text/javascript">
+                $(function(){
+                    /* ========================================================================= */
+                /*  Contact Form
+                /* ========================================================================= */
+                $('#contact-form').validate({
+                    rules: {
+                        name: {
+                            required: true,
+                            minlength: 2
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        message: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: "come on, you have a name don't you?",
+                            minlength: "your name must consist of at least 2 characters"
+                        },
+                        email: {
+                            required: "no email, no message"
+                        },
+                        message: {
+                            required: "um...yea, you have to write something to send this form.",
+                            minlength: "thats all? really?"
+                        }
+                    },
+                    submitHandler: function(form) {
+                        $(form).ajaxSubmit({
+                            type:"POST",
+                            data: $(form).serialize(),
+                            url:"process.php",
+                            success: function() {
+                                $('#contact-form :input').attr('disabled', 'disabled');
+                                $('#contact-form').fadeTo( "slow", 0.15, function() {
+                                    $(this).find(':input').attr('disabled', 'disabled');
+                                    $(this).find('label').css('cursor','default');
+                                    $('#success').fadeIn();
+                                });
+                            },
+                            error: function() {
+                                $('#contact-form').fadeTo( "slow", 0.15, function() {
+                                    $('#error').fadeIn();
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+
+
+        <!-- Google Analytics Script-->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-105685571-1', 'auto');
+          ga('send', 'pageview');
+      </script>
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 25, 2017 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+</body>
+</html>
