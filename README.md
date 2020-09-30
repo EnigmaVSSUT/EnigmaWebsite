@@ -29,4 +29,3 @@ This page has everything to help you get started with EnigmaWebsite development.
 
 P.S. Use 'git status' frequently, to see the state of the working directory and the staging area. 
 
-# Setting Up Environment
